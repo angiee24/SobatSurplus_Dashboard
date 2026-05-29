@@ -271,10 +271,21 @@ button[aria-selected="true"] {
 }
 
 /* ── Caption ── */
-.stCaption { color: var(--muted) !important; font-size: 12px !important; }
+.stCaption, [data-testid="stCaptionContainer"] {
+    color: var(--text2) !important;
+    font-size: 13.5px !important;
+}
 
 /* ── Divider ── */
 hr { border-color: var(--border) !important; }
+
+/* ── Streamlit Header Transparent ── */
+header[data-testid="stHeader"] {
+    background: transparent !important;
+}
+header[data-testid="stHeader"] * {
+    color: var(--text) !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
